@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Accessibility Styles */
+.high-contrast {
+  filter: contrast(1.5);
+}
+
+.dark-mode {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+.dark-mode img {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+.reduce-motion * {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* Accessibility Focus Styles */
+*:focus-visible {
+  outline: 2px solid #7c3aed;
+  outline-offset: 2px;
+}
+
+/* Custom Range Input Styles */
+input[type="range"] {
+  @apply h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  @apply w-4 h-4 bg-purple-600 rounded-full appearance-none cursor-pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  @apply w-4 h-4 bg-purple-600 rounded-full appearance-none cursor-pointer;
+}
